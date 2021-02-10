@@ -23,7 +23,6 @@ bot.on('ready', () => {
   setStatus();
   setInterval(() => setStatus(), 5000)
 })
-
 bot.on('message', async message => {
   let prefix = "!";
 
@@ -43,35 +42,7 @@ bot.on('message', async message => {
       .setFooter(`Ping`, bot.user.displayAvatarURL);
     let msg = await message.channel.send(embed1);
 
-    let embed2 = new RichEmbed()
-      .setTimestamp()
-      .setTitle(`Pong!`)
-      .setColor('#ee3434')
-      .setDescription(`A Latência é ${Math.floor(msg.createdTimestamp - message.createdTimestamp)}ms.\nA Latência da API é ${Math.round(bot.ping)}ms.`)
-      .setFooter(`Ping`, bot.user.displayAvatarURL);
-    msg.edit(embed2);
-  }
 
-  //Comando Say
-  if (cmd == "say") {
-    if (message.deletable) message.delete();
 
-    if (args.length < 0) return message.reply(`Não tem nada para falar?`).then(m => m.delete(5000));
-
-    let roleColor = message.guild.me.displayHexColor;
-
-    if (args[0].toLowerCase() === "embed") {
-      let embed = new RichEmbed()
-        .setTimestamp()
-        .setTitle(`${message.author.username}`)
-        .setDescription(args.slice(1).join(" "))
-        .setColor(roleColor === "#000000" ? "#ffffff" : roleColor)
-
-      message.channel.send(embed);
-    } else {
-      message.channel.send(args.join(" "));
-    }
-  }
-})
 
 bot.login(process.env.TOKEN);
