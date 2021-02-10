@@ -23,6 +23,7 @@ bot.on('ready', () => {
   setStatus();
   setInterval(() => setStatus(), 5000)
 })
+
 bot.on('message', async message => {
   let prefix = "!";
 
@@ -72,8 +73,5 @@ bot.on('message', async message => {
     }
   }
 })
-
-
-
 
 bot.login(process.env.TOKEN);
