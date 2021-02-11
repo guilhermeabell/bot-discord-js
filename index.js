@@ -11,10 +11,10 @@ config({
 bot.on('ready', () => {
   console.log(`O ${bot.user.username} foi iniciado com sucesso! Com ${bot.users.size} usuários, ${bot.channels.size} canais e ${bot.guilds.size} servidores.`);
   let status = [
-    { name: `Olá mundo!`, type: 'PLAYING' },
-    { name: `Se inscreva no canal!`, type: 'WATCHING' },
+    { name: `Hello World!`, type: 'PLAYING' },
+    { name: `Subscribe for channel!`, type: 'WATCHING' },
     { name: `${bot.users.size} pessoas!`, type: 'LISTENING' },
-    { name: `Bot em desenvolvimento.`, type: 'STREAMING', url: 'https://twitch.tv/SuaTwitch' }
+    { name: `Bot development.`, type: 'STREAMING', url: 'https://twitch.tv/SuaTwitch' }
   ]
   function setStatus() { // Function para mudar status do bot aleatoriamente;
     let randomStatus = status[Math.floor(Math.random() * status.length)]
