@@ -5,7 +5,7 @@ const { config } = require('dotenv');
 const bot = new Client({ disableEveryone: true });
 
 config({
-  path: __dirname + "/.env" //TOKEN//
+  path: __dirname + "/.env" //TOKEN/ bot.js
 })
 
 bot.on('ready', () => {
@@ -72,6 +72,6 @@ bot.on('message', async message => {
       message.channel.send(args.join(" "));
     }
   }
-})
+});
 
 bot.login(process.env.TOKEN);
