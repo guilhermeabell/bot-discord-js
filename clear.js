@@ -1,4 +1,4 @@
-"client.on('message', message => {
+client.on('message',  message => {
 if (message.author.bot) return;
 if (message.channel.type == 'dm') return;
 if (!message.content.toLowerCase().startsWith(config.prefix.toLowerCase())) return;
@@ -15,4 +15,5 @@ try {
 } catch (err) {
     console.error('Erro:' + err);
 }
+
 });
