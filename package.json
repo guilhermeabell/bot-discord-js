@@ -1,0 +1,23 @@
+{
+  "name": "bot-discord-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "teste.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermeabel99/bot-discord-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermeabel99/bot-discord-js/issues"
+  },
+  "homepage": "https://github.com/guilhermeabel99/bot-discord-js#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
